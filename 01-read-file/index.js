@@ -7,3 +7,7 @@ const reader = fs.createReadStream(fileWay);
 reader.on('data', function (text) {
   console.log(text.toString());
 });
+
+reader.on('error', function (err) {
+  console.error('Произошла ошибка:', err);
+});
